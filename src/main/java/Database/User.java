@@ -1,3 +1,5 @@
+package Database;
+
 import lombok.*;
 
 import javax.persistence.*;
