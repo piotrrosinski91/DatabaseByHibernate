@@ -27,13 +27,21 @@ public class Main implements CommandLineRunner {
 
         userRepository.save(someUser);
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
         List<User> users2 = userRepository.findAll();
         users2.forEach(System.out::println);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
 
         List<User> findByUsername = userRepository.findByUsername("Kacper");
         findByUsername.forEach(System.out::println);
 
-        List<User> findByUsernameContaining = userRepository.findByUsernameContaining("ek");
+        List<User> findByUsernameContaining = userRepository.findByUsernameContaining("ar");
         findByUsernameContaining.forEach(System.out::println);
 
         List<User> findByAgeGreaterThan = userRepository.findByAgeGreaterThan(30);
@@ -44,6 +52,6 @@ public class Main implements CommandLineRunner {
     }
 
     private User getUser(){
-        return new User("Piotr Rosinski", 30, "Warszawa");
+        return new User("Piotr", 30, "Warszawa");
     }
 }
